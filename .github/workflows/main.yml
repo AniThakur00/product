@@ -67,5 +67,5 @@ jobs:
           
       - name: Create LoadBalancer Service
         run: |
-          kubectl apply -f service.yaml
+          kubectl replace -f service.yaml --force
           
