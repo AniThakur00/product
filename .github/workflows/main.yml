@@ -57,6 +57,10 @@ jobs:
       - name: Set Kubectl Context
         run: gcloud container clusters get-credentials product --zone us-central1 --project project-1-400619 
 
+      - name: Update Deployment and service File
+        run: |
+          echo "# Force update $(date)" >> deployment.yaml
+          echo "# Force update $(date)" >> service.yaml
 
       - name: Deploy to GKE
         run: |
