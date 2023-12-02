@@ -60,5 +60,6 @@ jobs:
           kubectl rollout  restart  -f deployment.yaml
           
       - name: Create LoadBalancer Service
-        run: kubectl apply -f service.yaml
-        kubectl rollout  restart  -f service.yaml
+        run: |
+          kubectl apply -f service.yaml
+          kubectl rollout  restart  -f service.yaml
