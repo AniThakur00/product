@@ -54,6 +54,11 @@ jobs:
       - name: Set Kubectl Context
         run: gcloud container clusters get-credentials product --zone us-central1 --project project-1-400619 
 
+      - name: Modify Deployment and Service Files
+        run: |
+          # Update the timestamp of deployment and service files to trigger a change
+          touch deployment.yaml service.yaml
+
       - name: Deploy to GKE
         run: |
           kubectl apply -f deployment.yaml
@@ -62,4 +67,4 @@ jobs:
       - name: Create LoadBalancer Service
         run: |
           kubectl apply -f service.yaml
-          kubectl rollout  restart  -f service.yaml
+          
