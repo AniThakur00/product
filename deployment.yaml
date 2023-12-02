@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: product
-          image: gcr.io/project-1-400619/product:{{ github.run_number }} gcr.io/project-1-400619/product:latest
+          image: gcr.io/project-1-400619/product:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
