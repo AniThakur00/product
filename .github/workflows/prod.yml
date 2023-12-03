@@ -34,8 +34,8 @@ jobs:
         run: |
           docker pull gcr.io/project-1-400619/product:latest
           kubectl delete --all pods
-          kubectl apply -f deployment.yaml
-          kubectl rollout  restart  -f deployment.yaml
+          kubectl apply -f deployment_prod.yaml
+          kubectl rollout  restart  -f deployment_prod.yaml
           
       - name: Create LoadBalancer Service
-        run: kubectl apply -f service.yaml
+        run: kubectl apply -f service_prod.yaml
