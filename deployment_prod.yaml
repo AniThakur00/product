@@ -13,7 +13,7 @@ spec:
         app: product
     spec:
       containers:
-        - name: product
+        - name: product-prod
           image: gcr.io/project-1-400619/product
           imagePullPolicy: Always
           
