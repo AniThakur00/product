@@ -37,12 +37,12 @@ app.get('/', (req, res) => {
 })
 
 //My Routes
-app.use('/product', authRoutes)
-app.use('/product', userRoutes)
-app.use('/product', categoryRoutes)
-app.use('/product', productRoutes)
-app.use('/product', orderRoutes)
-app.use('/product', stripeRoute)
+app.use('/api', authRoutes)
+app.use('/api', userRoutes)
+app.use('/api', categoryRoutes)
+app.use('/api', productRoutes)
+app.use('/api', orderRoutes)
+app.use('/api', stripeRoute)
 
 
 
